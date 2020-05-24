@@ -1,0 +1,22 @@
+<p></p>
+<div class="row">
+    <div class="col-md-5">
+        <label for="name">Username</label>
+        <input type="text" 
+        id="name" 
+        class="form-control"
+        [(ngModel)]="username"
+        #nameInput
+        >
+    </div>
+</div>
+<br>
+<p *ngIf="username !==''">Displaying text by String Interpolation: {{ username }}</p>
+<div class="row">
+    <div class="col-sm-1">
+        <button class="btn btn-success" [disabled]="username === ''" type="button" (click)="onSubmit()">Submit</button>
+    </div>
+    <div class="col-sm-3">
+        <button class="btn btn-danger" type="button" (click)="onReset()">Reset</button>
+    </div>
+</div>

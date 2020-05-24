@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="card" class="col-md-6">
+        <div class="card-header">Active Users</div>
+        <div class="card-body" *ngFor="usr of usersList">
+            <app-active-user></app-active-user>
+        </div>
+      </div>
+
+      <div class="card" class="col-md-6">
+        <div class="card-header">Inactive Users</div>
+        <div class="card-body" *ngFor="let userName of usersList">
+            <app-inactive-user [userName]='userName'></app-inactive-user>
+        </div>
+      </div>
+</div>

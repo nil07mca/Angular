@@ -1,0 +1,21 @@
+<p></p>
+<div class="row">
+    <div class="col-md-12">
+        <app-success-alert *ngIf="showSuccess"></app-success-alert>
+    </div>
+    <div class="col-md-12">
+        <app-warning-alert *ngIf="showWarning"></app-warning-alert>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-3">
+        <button class="btn btn-success" type="button" (click)="onClickShowSuccess()">Show Success!</button>
+    </div>
+    <div class="col-sm-3">
+        <button class="btn btn-warning" type="button" (click)="onClickShowWarning()">Show Warning!</button>
+    </div>
+    <div class="col-sm-3">
+        <button class="btn btn-danger" type="button" (click)="onClickHideAll()">Hide All</button>
+    </div>
+</div>

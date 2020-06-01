@@ -15,6 +15,19 @@ import { GlobalHeaderComponent } from './shared/global-header/global-header.comp
 import { Task01Component } from './task01/task01.component';
 import { Task02Component } from './task02/task02.component';
 import { Task03Component } from './task03/task03.component';
+import { Task04Component } from './task04/task04.component';
+import { Routes, RouterModule } from '@angular/router';
+import { FileSizePipe } from './file-size.pipe';
+import { Task05Component } from './task05/task05.component';
+
+const appRoutes: Routes = [
+  { path: '', component: Task01Component },
+  { path: 'task01', component: Task01Component },
+  { path: 'task02', component: Task02Component },
+  { path: 'task03', component: Task03Component },
+  { path: 'task04', component: Task04Component },
+  { path: 'task05', component: Task05Component }
+]
 
 @NgModule({
   declarations: [
@@ -31,11 +44,15 @@ import { Task03Component } from './task03/task03.component';
     GlobalHeaderComponent,
     Task01Component,
     Task02Component,
-    Task03Component
+    Task03Component,
+    Task04Component,
+    FileSizePipe,
+    Task05Component
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

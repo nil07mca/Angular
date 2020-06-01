@@ -1,1 +1,10 @@
-<p>active-user works!</p>
+<div>
+    <ul class="list-group" *ngFor="let user of users; let i = index">
+        <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">{{user}}
+            <span class="badge badge-danger">
+                <a class="refColor" (click)="setToInactive(i)">Set to Inactive</a>
+            </span>
+        </li>
+    </ul>
+</div>
+

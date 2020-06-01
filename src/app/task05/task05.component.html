@@ -1,0 +1,14 @@
+<p>
+    Create a custom Pipe based on the file size display file size a button with file size add KB, MB, TB (ex: 2KB, 2.5MB etc.) based on the file size and change the background color of the file size button based on the file size KB -green, MB-grey and Tb-ember etc.<br>
+</p>
+<ul class="list-group" *ngFor="let file of files">
+    <li class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center">{{file.name | uppercase}}
+    <span>
+        <button class="btn" type="button">{{file.size | fileSize}}</button>
+        <!-- [ngStyle]="{'backgroundColor': file.name | fileSize: file.fileSize}" -->
+    </span>
+    </li>
+</ul>
+
+
+

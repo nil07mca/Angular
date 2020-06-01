@@ -10,7 +10,7 @@ export class AppComponent {
   hello: boolean = false;
   title = 'angularAssignment';
   users: string[] = [];
-  selectedFeature: string = 'Task 01'
+  // selectedFeature: string = 'Task 01'
   onSubmit() {
     this.hello = true;
     this.users.push(this.username);
@@ -19,7 +19,7 @@ export class AppComponent {
   onReset() {
     this.username = '';
   }
-  onNavigate(feature: string) {
-     this.selectedFeature = feature;
-  }
+  // onNavigate(feature: string) {
+  //    this.selectedFeature = feature;
+  // }
 }

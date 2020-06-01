@@ -1,48 +1,9 @@
 <div class="container">
-    <app-global-header (featureSelected)="onNavigate($event)"></app-global-header>
-    <app-task01 *ngIf="selectedFeature === 'Task 01'"></app-task01>
+    <!-- <app-global-header (featureSelected)="onNavigate($event)"></app-global-header> -->
+    <app-global-header></app-global-header>
+    <router-outlet></router-outlet>
+    <!-- <app-task01 *ngIf="selectedFeature === 'Task 01'"></app-task01>
     <app-task02 *ngIf="selectedFeature === 'Task 02'"></app-task02>
     <app-task03 *ngIf="selectedFeature === 'Task 03'"></app-task03>
+    <app-task04 *ngIf="selectedFeature === 'Task 04'"></app-task04> -->
 </div>
-
-
-<!-- <div class="container">
-    <app-global-header></app-global-header>
-    <br>
-    <app-task01></app-task01>
-    <br>
-    <div class="col-md-12">
-        <app-game></app-game>
-    </div>
-    <div class="row">
-        <div class="col-md-5">
-            <label for="name">Username</label>
-            <input type="text" 
-            id="name" 
-            class="form-control"
-            [(ngModel)]="username"
-            #nameInput
-            >
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-1">
-            <button class="btn btn-success" [disabled]="username === ''" type="button" (click)="onSubmit()">Submit</button>
-        </div>
-        <div class="col-sm-3">
-            <button class="btn btn-danger" type="button" (click)="onReset()">Reset</button>
-        </div>
-    </div>
-    <hr>
-    <div class="card">
-        <div class="card-header">Current Users</div>
-        <div class="card-body">
-            <app-user [usersList]='users'></app-user>
-        </div>
-      </div>
-</div>
-
-
-
- -->
